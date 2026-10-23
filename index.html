@@ -41,7 +41,7 @@
   .brand{display:flex;align-items:center;gap:14px;line-height:1.1}
   .brand b{font-family:var(--font-serif);font-style:italic;font-size:21px;font-weight:400;letter-spacing:.01em;white-space:nowrap}
   .brand__rule{width:1px;height:26px;background:linear-gradient(180deg,transparent,var(--line) 22%,var(--line) 78%,transparent)}
-  .brand__tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.35;max-width:9em}
+  .brand__tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.35;white-space:nowrap}
   .nav{display:flex;gap:22px;margin-left:auto;font-size:14px;color:var(--muted)}
   .nav a:hover{color:var(--ink)}
   .top__phone{font-size:15px;font-weight:600;white-space:nowrap}
@@ -53,7 +53,7 @@
     .top__cta{padding:10px 14px;font-size:13px}
     .brand{flex-direction:column;align-items:flex-start;gap:0}
     .brand__rule{display:none}
-    .brand__tag{margin-top:3px;font-size:10px;max-width:none}
+    .brand__tag{margin-top:3px;font-size:10px;white-space:nowrap}
   }
 
   /* ---------- hero ---------- */
@@ -124,7 +124,7 @@
     .chips{gap:6px}
   }
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
   @media (max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:12px}}
   .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px -26px rgba(60,40,30,.5);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
   .card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -30px rgba(60,40,30,.6)}
@@ -201,7 +201,7 @@
           <a class="btn btn--ghost" href="{{WA:general}}">Написать в WhatsApp</a>
         </div>
         <div class="proof">
-          <span><span class="stars">★★★★★</span> <b>5,0</b> · 56 отзывов на Яндекс.Картах</span>
+          <span><span class="stars">★★★★★</span> <b>5,0</b> · 56 оценок на Яндекс.Картах</span>
           <span><b>3 900</b> подписчиков в Instagram</span>
         </div>
       </div>
@@ -217,7 +217,7 @@
       <div class="feat"><b>2 часа</b><span>Собираем и привозим по Воронежу</span></div>
       <div class="feat"><b>Фото букета</b><span>Пришлём перед отправкой курьера</span></div>
       <div class="feat"><b>На воде</b><span>В переноске — цветы не страдают в дороге</span></div>
-      <div class="feat"><b>5,0 на картах</b><span>56 отзывов на Яндекс.Картах</span></div>
+      <div class="feat"><b>5,0 на картах</b><span>56 оценок на Яндекс.Картах</span></div>
     </div>
   </section>
 
@@ -254,109 +254,69 @@
 
       <div class="grid" id="grid">
 
-        <article class="card" data-occasion="svidanie prosto" data-price="4900">
+        <article class="card" data-occasion="svidanie prosto" data-price="3000">
           <div class="card__media">
-            <img src="assets/c1.webp" alt="Букет «Персиковый рассвет»" loading="lazy">
-            <span class="card__badge">Хит</span>
+            <img src="assets/tulips.webp" alt="Сборный букет S — фото салона" loading="lazy">
+            <span class="card__badge">S</span>
           </div>
           <div class="card__body">
-            <h3>Персиковый рассвет</h3>
-            <p class="card__comp">Ранункулюсы, маттиола, эустома · 15 стеблей</p>
+            <h3>Сборный букет S</h3>
+            <p class="card__comp">Букет-комплимент к подарку или на свидание. Состав подберём под пожелания.</p>
             <div class="card__foot">
-              <div class="price"><small>от</small>4 900 ₽</div>
-              <a class="card__btn" href="{{WA:order|Персиковый рассвет|4 900}}">Заказать</a>
+              <div class="price"><small>от</small>3 000 ₽</div>
+              <a class="card__btn" href="{{WA:order|Сборный букет S|3 000}}">Заказать</a>
             </div>
           </div>
         </article>
 
-        <article class="card" data-occasion="birthday mame" data-price="6400">
+        <article class="card" data-occasion="birthday mame" data-price="5000">
           <div class="card__media">
-            <img src="assets/c2.webp" alt="Букет «Пудровый микс»" loading="lazy">
+            <img src="assets/c2.webp" alt="Сборный букет M — фото салона" loading="lazy">
+            <span class="card__badge">M</span>
           </div>
           <div class="card__body">
-            <h3>Пудровый микс</h3>
-            <p class="card__comp">Розы, гвоздики, маттиола, гиперикум · 19 стеблей</p>
+            <h3>Сборный букет M</h3>
+            <p class="card__comp">Соберём под ваши пожелания и бюджет: пионовидные розы, гортензии, сезонные цветы.</p>
             <div class="card__foot">
-              <div class="price"><small>от</small>6 400 ₽</div>
-              <a class="card__btn" href="{{WA:order|Пудровый микс|6 400}}">Заказать</a>
+              <div class="price"><small>от</small>5 000 ₽</div>
+              <a class="card__btn" href="{{WA:order|Сборный букет M|5 000}}">Заказать</a>
             </div>
           </div>
         </article>
 
-        <article class="card" data-occasion="svidanie" data-price="3900">
+        <article class="card" data-occasion="wedding birthday" data-price="10000">
           <div class="card__media">
-            <img src="assets/tulips.webp" alt="Букет «Красный шёлк» из тюльпанов" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Красный шёлк</h3>
-            <p class="card__comp">Тюльпаны · 35 шт.</p>
-            <div class="card__foot">
-              <div class="price"><small>от</small>3 900 ₽</div>
-              <a class="card__btn" href="{{WA:order|Красный шёлк|3 900}}">Заказать</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-occasion="wedding" data-price="5500">
-          <div class="card__media">
-            <img src="assets/c4.webp" alt="Букет «Сливочный пленэр»" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Сливочный пленэр</h3>
-            <p class="card__comp">Гортензия, розы, эустома + бутоньерка в подарок</p>
-            <div class="card__foot">
-              <div class="price"><small>от</small>5 500 ₽</div>
-              <a class="card__btn" href="{{WA:order|Сливочный пленэр|5 500}}">Заказать</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-occasion="birthday svidanie" data-price="7200">
-          <div class="card__media">
-            <img src="assets/c5.webp" alt="Букет «Розовый сад»" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Розовый сад</h3>
-            <p class="card__comp">Пионовидные розы, гвоздики, сирень · 11 стеблей</p>
-            <div class="card__foot">
-              <div class="price"><small>от</small>7 200 ₽</div>
-              <a class="card__btn" href="{{WA:order|Розовый сад|7 200}}">Заказать</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-occasion="prosto birthday" data-price="7200">
-          <div class="card__media">
-            <img src="assets/muscari.webp" alt="Букет «Мускари и персик»" loading="lazy">
-          </div>
-          <div class="card__body">
-            <h3>Мускари и персик</h3>
-            <p class="card__comp">Садовые розы, мускари, маттиола · 17 стеблей</p>
-            <div class="card__foot">
-              <div class="price"><small>от</small>7 200 ₽</div>
-              <a class="card__btn" href="{{WA:order|Мускари и персик|7 200}}">Заказать</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-occasion="wedding birthday" data-price="10900">
-          <div class="card__media">
-            <img src="assets/c3.webp" alt="Букет «Белая симфония»" loading="lazy">
+            <img src="assets/c3.webp" alt="Сборный букет XL — фото салона" loading="lazy">
             <span class="card__badge">XL</span>
           </div>
           <div class="card__body">
-            <h3>Белая симфония</h3>
-            <p class="card__comp">Гортензия, пионовидные розы · 25 стеблей</p>
+            <h3>Сборный букет XL</h3>
+            <p class="card__comp">Большой авторский букет под повод. Состав — по вашему бюджету и пожеланиям.</p>
             <div class="card__foot">
-              <div class="price"><small>от</small>10 900 ₽</div>
-              <a class="card__btn" href="{{WA:order|Белая симфония|10 900}}">Заказать</a>
+              <div class="price"><small>от</small>10 000 ₽</div>
+              <a class="card__btn" href="{{WA:order|Сборный букет XL|10 000}}">Заказать</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-occasion="svidanie birthday mame wedding prosto" data-price="3000">
+          <div class="card__media">
+            <img src="assets/c4.webp" alt="Букет по вашему составу — фото салона" loading="lazy">
+            <span class="card__badge">Свой</span>
+          </div>
+          <div class="card__body">
+            <h3>Букет по вашему составу</h3>
+            <p class="card__comp">Соберём по составу и бюджету: розы, гортензии, ранункулюсы, маттиола.</p>
+            <div class="card__foot">
+              <div class="price"><small>от</small>3 000 ₽</div>
+              <a class="card__btn" href="{{WA:order|Букет по вашему составу|3 000}}">Заказать</a>
             </div>
           </div>
         </article>
 
       </div>
       <p class="empty" id="empty">Под этот фильтр пока нет букетов — но мы соберём под ваш бюджет. Напишите нам.</p>
-      <p class="note">Демо-макет для обсуждения: фото — из публикаций салона, состав и цены — пример, заменим на актуальный прайс.</p>
+      <p class="note">Названия и цены — с текущего сайта салона. Фото — из публикаций салона; состав уточним у флориста.</p>
     </div>
   </section>
 </main>
@@ -412,7 +372,7 @@
 
   function priceBand(p){
     if (p < 5000) return 'lo';
-    if (p <= 10000) return 'mid';
+    if (p < 10000) return 'mid';
     return 'hi';
   }
   function apply(){
